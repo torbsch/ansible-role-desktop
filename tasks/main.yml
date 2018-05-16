@@ -1,0 +1,35 @@
+---
+- name: Install Chromium
+  package:
+    name: chromium-browser
+    state: present
+- name: Install GIMP
+  package:
+    name: gimp
+    state: present
+- name: Install Hiri
+  command: snap install hiri
+- name: Install Spotify
+  command: snap install spotify
+- name: Install Dash to Dock
+  package:
+    name: gnome-shell-extension-dashtodock
+    state: present
+- name: Install Atom
+  command: snap install atom --classic
+- name: Install LibreOffice
+  package:
+    name: libreoffice
+    state: present
+- name: Install Mailspring
+  command: snap install mailspring
+- name: Install Nextcloud
+  command: snap install nextcloud-client
+- name: Install VirtualBox
+  package:
+    name: virtualbox
+    state: present
+- name: Install Vagrant
+  package:
+    name: vagrant
+    state: present
