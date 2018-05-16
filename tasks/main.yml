@@ -33,3 +33,5 @@
   package:
     name: vagrant
     state: present
+- name: Install GitKraken
+  command: snap install gitkraken    
