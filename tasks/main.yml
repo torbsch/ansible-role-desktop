@@ -34,4 +34,8 @@
     name: vagrant
     state: present
 - name: Install GitKraken
-  command: snap install gitkraken    
+  command: snap install gitkraken
+- name: Install gnome tweak tool
+  package:
+    name: gnome-tweak-tool
+    state: present
