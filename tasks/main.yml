@@ -39,3 +39,7 @@
   package:
     name: gnome-tweak-tool
     state: present
+- name: Install KeePassXC
+  package:
+    name: keepassxc
+    state: present
