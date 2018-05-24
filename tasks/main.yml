@@ -43,3 +43,7 @@
   package:
     name: keepassxc
     state: present
+- name: Install Dolphin
+  package:
+    name: dolphin
+    state: present
