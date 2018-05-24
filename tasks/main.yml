@@ -47,3 +47,7 @@
   package:
     name: dolphin
     state: present
+- name: Install Gnome ToDo
+  package:
+    name: gnome-todo
+    state: present
