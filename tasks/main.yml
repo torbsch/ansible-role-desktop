@@ -51,3 +51,30 @@
   package:
     name: gnome-todo
     state: present
+- name: Add flatpak Repository
+  apt_repository:
+    repo: ppa:alexlarsson/flatpak
+    state: present
+- name: Install flatpak
+  package:
+    name: flatpak
+    state: present
+- name: Add gnome plugin for flatpak
+  package:
+    name: gnome-software-plugin-flatpak
+    state: present
+# flatpak_remote is available with ansible version 2.6
+# - name: Add flathub Repository
+#   flatpak_remote:
+#     name: flathub
+#     state: present
+#     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+- name: Add gnome plugin for flatpak
+  command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# flatpak is available with ansible version 2.6
+# - name: Install FeedReader (flatpak)
+#   flatpak:
+#     name: http://feedreader.xarbit.net/feedreader-repo/feedreader.flatpakref
+#     state: present
+- name: Install FeedReader (flatpak)
+  command: flatpak install flathub org.gnome.FeedReader -y
