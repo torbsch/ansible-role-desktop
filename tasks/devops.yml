@@ -2,6 +2,9 @@
 - name: Install Atom
   command: snap install atom --classic
 
+- name: Ensure Visual Studio Code is installed
+  command: snap install vscode --classic
+
 - name: Install VirtualBox
   apt:
     name: virtualbox
