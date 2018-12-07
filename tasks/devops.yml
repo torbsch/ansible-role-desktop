@@ -1,0 +1,16 @@
+---
+- name: Install Atom
+  command: snap install atom --classic
+
+- name: Install VirtualBox
+  apt:
+    name: virtualbox
+    state: present
+
+- name: Install Vagrant
+  apt:
+    name: vagrant
+    state: present
+
+- name: Install GitKraken
+  command: snap install gitkraken

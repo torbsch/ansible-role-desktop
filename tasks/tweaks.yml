@@ -1,0 +1,25 @@
+---
+- name: Install gnupg2
+  apt:
+    name: gnupg2
+    state: present
+
+- name: Install guake
+  apt:
+    name: guake
+    state: present
+
+- name: Install Dash to Dock
+  apt:
+    name: gnome-shell-extension-dashtodock
+    state: present
+
+- name: Install gnome tweak tool
+  apt:
+    name: gnome-tweak-tool
+    state: present
+
+- name: Install Dolphin
+  apt:
+    name: dolphin
+    state: present
