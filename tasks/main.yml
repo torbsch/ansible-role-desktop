@@ -1,11 +1,11 @@
 ---
 - name: Install Chromium
-  package:
+  apt:
     name: chromium-browser
     state: present
 
 - name: Install GIMP
-  package:
+  apt:
     name: gimp
     state: present
 
@@ -16,7 +16,7 @@
   command: snap install spotify
 
 - name: Install Dash to Dock
-  package:
+  apt:
     name: gnome-shell-extension-dashtodock
     state: present
 
@@ -24,7 +24,7 @@
   command: snap install atom --classic
   
 - name: Install LibreOffice
-  package:
+  apt:
     name: libreoffice
     state: present
 
@@ -35,12 +35,12 @@
   command: snap install nextcloud-client
 
 - name: Install VirtualBox
-  package:
+  apt:
     name: virtualbox
     state: present
 
 - name: Install Vagrant
-  package:
+  apt:
     name: vagrant
     state: present
 
@@ -48,27 +48,27 @@
   command: snap install gitkraken
 
 - name: Install gnome tweak tool
-  package:
+  apt:
     name: gnome-tweak-tool
     state: present
 
 - name: Install KeePassXC
-  package:
+  apt:
     name: keepassxc
     state: present
 
 - name: Install Dolphin
-  package:
+  apt:
     name: dolphin
     state: present
 
 - name: Install kio-extras (smb)
-  package:
+  apt:
     name: kio-extras
     state: present
 
 - name: Install gnupg2
-  package:
+  apt:
     name: gnupg2
     state: present
 
