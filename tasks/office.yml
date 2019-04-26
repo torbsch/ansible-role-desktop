@@ -7,10 +7,10 @@
     name: libreoffice
     state: present
 
-- name: Install kio-extras (smb)
-  apt:
-    name: kio-extras
-    state: present
+    # - name: Install kio-extras (smb)
+    #   apt:
+    #     name: kio-extras
+    #     state: present
 
 - name: Install Mailspring
   command: snap install mailspring
