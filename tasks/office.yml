@@ -19,3 +19,6 @@
   apt:
     name: chromium-browser
     state: present
+
+- name: Install Rambox
+  command: snap install rambox
