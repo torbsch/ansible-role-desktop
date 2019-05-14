@@ -12,5 +12,10 @@
     name: vagrant
     state: present
 
+- name: Install packer
+  apt:
+   name: packer
+   state: present
+
 - name: Install GitKraken
   command: snap install gitkraken
