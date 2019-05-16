@@ -4,7 +4,7 @@
 
 - name: Install VirtualBox
   apt:
-    name: virtualbox
+    name: ['virtualbox', 'virtualbox-qt', 'virtualbox-dkms', 'virtualbox-guest-additions-iso']
     state: present
 
 - name: Install Vagrant
