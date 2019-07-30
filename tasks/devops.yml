@@ -19,3 +19,8 @@
 
 - name: Install GitKraken
   command: snap install gitkraken
+
+- name: Clone VimWiki Repository
+  git:
+    repo: https://github.com/vimwiki/vimwiki.git
+    dest: ~/.vim/pack/plugins/start/vimwiki
