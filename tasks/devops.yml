@@ -34,3 +34,8 @@
   apt:
     name: ['qemu-kvm', 'virt-manager']
     state: present
+
+- name: Ensure remmina is installed
+  apt:
+    name: remmina
+    state: present
