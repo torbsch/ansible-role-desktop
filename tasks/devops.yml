@@ -24,3 +24,8 @@
   git:
     repo: https://github.com/vimwiki/vimwiki.git
     dest: ~/.vim/pack/plugins/start/vimwiki
+
+- name: Install net-tools
+  apt:
+    name: net-tools
+    state: present
