@@ -29,3 +29,8 @@
   apt:
     name: net-tools
     state: present
+
+- name: Ensure qemu/virt-manager is installed
+  apt:
+    name: ['qemu-kvm', 'virt-manager']
+    state: present
