@@ -1,41 +1,49 @@
 ---
 - name: Ensure Visual Studio Code is installed
   command: snap install code --classic
+  become: yes
 
 - name: Install VirtualBox
   apt:
     name: ['virtualbox', 'virtualbox-qt', 'virtualbox-dkms', 'virtualbox-guest-additions-iso']
     state: present
+  become: yes
 
 - name: Install Vagrant
   apt:
     name: vagrant
     state: present
+  become: yes
 
 - name: Install packer
   apt:
    name: packer
    state: present
+  become: yes
 
 - name: Install GitKraken
   command: snap install gitkraken
+  become: yes
 
 - name: Clone VimWiki Repository
   git:
     repo: https://github.com/vimwiki/vimwiki.git
     dest: ~/.vim/pack/plugins/start/vimwiki
 
-- name: Install net-tools
-  apt:
-    name: net-tools
-    state: present
+# - name: Install net-tools
+#   apt:
+#     name: net-tools
+#     state: present
+#   become: yes
 
 - name: Ensure qemu/virt-manager is installed
   apt:
     name: ['qemu-kvm', 'virt-manager']
     state: present
+  become: yes
 
 - name: Ensure remmina is installed
   apt:
     name: remmina
     state: present
+  become: yes

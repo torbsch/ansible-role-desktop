@@ -1,11 +1,9 @@
 ---
-- name: Install Hiri
-  command: snap install hiri
-
 - name: Install LibreOffice
   apt:
     name: libreoffice
     state: present
+  become: yes
 
     # - name: Install kio-extras (smb)
     #   apt:
@@ -14,11 +12,10 @@
 
 - name: Install Mailspring
   command: snap install mailspring
+  become: yes
 
 - name: Install Chromium
   apt:
     name: chromium-browser
     state: present
-
-- name: Install Rambox
-  command: snap install rambox
+  become: yes
