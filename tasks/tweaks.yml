@@ -9,9 +9,3 @@
     name: gnome-tweak-tool
     state: present
   become: yes
-
-- name: Install Dolphin
-  apt:
-    name: dolphin
-    state: present
-  become: yes
