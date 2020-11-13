@@ -7,7 +7,7 @@
 
 - name: Install Spotify
   command: snap install spotify
-   become: yes
+  become: yes
 
 - name: Install Nextcloud
   command: snap install nextcloud-client
