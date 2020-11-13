@@ -22,7 +22,7 @@
   become: yes
 
 - name: Install GitKraken
-  command: snap install gitkraken
+  command: snap install gitkraken --classic
   become: yes
 
 - name: Clone VimWiki Repository
