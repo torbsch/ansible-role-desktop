@@ -3,14 +3,19 @@
   apt:
     name: gimp
     state: present
+  become: yes
 
 - name: Install Spotify
   command: snap install spotify
-  
+   become: yes
+
 - name: Install Nextcloud
   command: snap install nextcloud-client
+  become: yes
 
 - name: Install KeePassXC
   apt:
-    name: keepassxc    
+    name: keepassxc
     state: present
+  become: yes
+
