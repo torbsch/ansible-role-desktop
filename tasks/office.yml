@@ -5,6 +5,25 @@
     state: present
   become: yes
 
+- name: Add Microsoft Teams apt key
+  apt_key:
+    url: https://packages.microsoft.com/keys/microsoft.asc
+    state: present
+  become: yes
+
+- name: Add Microsoft Teams Repository
+  apt_repository:
+    repo: deb https://packages.microsoft.com/repos/ms-teams stable main
+    filename: teams
+    state: present
+  become: yes
+
+- name: Ensure Microsoft Teams is installed
+  apt:
+    name: teams
+    state: present
+  become: yes
+
     # - name: Install kio-extras (smb)
     #   apt:
     #     name: kio-extras
