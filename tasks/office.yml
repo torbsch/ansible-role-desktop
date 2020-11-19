@@ -24,6 +24,12 @@
     state: present
   become: yes
 
+- name: Ensure Teamviewer is installed
+  apt:
+    deb: https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+    state: present
+  become: yes
+
     # - name: Install kio-extras (smb)
     #   apt:
     #     name: kio-extras
