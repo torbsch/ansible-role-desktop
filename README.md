@@ -1,7 +1,32 @@
-# Ansible Role for desktop setup
+# Ansible Role: Desktop
+An Ansible Role that installs tools on Linux Workstations.
 
-#!/bin/bash
+## Software packages
+* gnome tweak tool
+* libreoffice
+* teams
+* teamviewer
+* mailspring
+* chromium
+* visual studio code
+* virtualbox 
+* vagrant
+* packer
+* gitkraken
+* vimwiki
+* qemu
+* remmina
+* gimp
+* nextcloud client
+* keepassxc
 
-# sudo apt-get install ansible -y
-# sudo apt-get install git -y
-# ansible-pull -U https://github.com/torbsch/setup.git desktop.yml
+
+## Dependencies
+None.
+
+## Example Playbook
+- hosts: localhost
+  gather_facts: yes
+  connection: local
+  roles:
+  - ansible-role-desktop
