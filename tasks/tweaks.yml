@@ -9,3 +9,9 @@
     name: gnome-tweak-tool
     state: present
   become: yes
+
+- name: Ensure cifs-utils is installed (smb)
+  apt:
+    name: cifs-utils
+    state: present
+  become: yes
