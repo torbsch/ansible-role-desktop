@@ -4,7 +4,7 @@
 #     name: gnupg2
 #     state: present
 
-- name: Install gnome tweak tool
+- name: Ensure gnome tweak tool is installed
   apt:
     name: gnome-tweak-tool
     state: present

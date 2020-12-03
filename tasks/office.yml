@@ -1,5 +1,5 @@
 ---
-- name: Install LibreOffice
+- name: Ensure LibreOffice is installed
   apt:
     name: libreoffice
     state: present
@@ -35,13 +35,13 @@
     #     name: kio-extras
     #     state: present
 
-- name: Install Mailspring
+- name: Ensure Mailspring is installed
   snap:
     name: mailspring
     state: present
   become: yes
 
-- name: Install Chromium
+- name: Ensure Chromium is installed
   apt:
     name: chromium-browser
     state: present

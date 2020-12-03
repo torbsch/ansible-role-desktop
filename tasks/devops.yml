@@ -6,25 +6,25 @@
     state: present
   become: yes
 
-- name: Install VirtualBox
+- name: Ensure VirtualBox is installed
   apt:
     name: ['virtualbox', 'virtualbox-qt', 'virtualbox-dkms', 'virtualbox-guest-additions-iso']
     state: present
   become: yes
 
-- name: Install Vagrant
+- name: Ensure Vagrant is installed
   apt:
     name: vagrant
     state: present
   become: yes
 
-- name: Install packer
+- name: Ensure packer is installed
   apt:
    name: packer
    state: present
   become: yes
 
-- name: Install GitKraken
+- name: Ensure GitKraken is installed
   snap:
     name: gitkraken
     classic: yes
@@ -48,7 +48,7 @@
     state: present
   become: yes
 
-- name: Ensure remmina is installed
+- name: Ensure Remmina is installed
   apt:
     name: remmina
     state: present

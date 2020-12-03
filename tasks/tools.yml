@@ -1,11 +1,11 @@
 ---
-- name: Install GIMP
+- name: Ensure GIMP is installed
   apt:
     name: gimp
     state: present
   become: yes
 
-- name: Install Spotify
+- name: Ensure Spotify is installed
   snap:
     name: spotify
     state: present
@@ -18,13 +18,13 @@
     update_cache: yes
   become: yes
 
-- name: Install Nextcloud
+- name: Ensure Nextcloud client is installed
   apt:
     name: nextcloud-client
     state: present
   become: yes
 
-- name: Install KeePassXC
+- name: Ensure KeePassXC is installed
   apt:
     name: keepassxc
     state: present
