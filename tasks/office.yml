@@ -44,3 +44,9 @@
     name: chromium-browser
     state: present
   become: yes
+
+- name: Ensure Zoom client is installed
+  snap:
+    name: zoom-client
+    state: present
+  become: yes
