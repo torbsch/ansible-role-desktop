@@ -36,7 +36,9 @@
     #     state: present
 
 - name: Install Mailspring
-  command: snap install mailspring
+  snap:
+    name: mailspring
+    state: present
   become: yes
 
 - name: Install Chromium

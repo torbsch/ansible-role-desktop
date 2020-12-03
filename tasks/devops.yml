@@ -1,6 +1,9 @@
 ---
 - name: Ensure Visual Studio Code is installed
-  command: snap install code --classic
+  snap:
+    name: code
+    classic: yes
+    state: present
   become: yes
 
 - name: Install VirtualBox
@@ -22,7 +25,10 @@
   become: yes
 
 - name: Install GitKraken
-  command: snap install gitkraken --classic
+  snap:
+    name: gitkraken
+    classic: yes
+    state: present
   become: yes
 
 - name: Clone VimWiki Repository
